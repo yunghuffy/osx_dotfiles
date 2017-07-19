@@ -53,7 +53,7 @@ plugins=(git osx bundler)
 
 # User configuration
 
-export PATH="$HOME/bin:/usr/local/tranquil/bin:/usr/local/bin::/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:$HOME/.gem/ruby/2.0.0/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/tranquil/bin:/usr/local/bin::/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:$HOME/.gem/ruby/2.0.0/bin:$HOME/Library/Python/2.7/bin:$PATH""
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
