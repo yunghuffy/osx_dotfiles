@@ -1,0 +1,18 @@
+[user]
+  name = Jacob Castello
+  email = jacobcastello@gmail.com
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[credential]
+  helper = osxkeychain
+[merge]
+  tool = vimdiff
+[difftool]
+  prompt = false
