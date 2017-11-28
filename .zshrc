@@ -49,11 +49,11 @@ ZSH_THEME="bullet-train"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx bundler)
+plugins+=(git osx bundler colorize django virtualenv virtualenvwrapper docker-machine aws)
 
 # User configuration
 
-export PATH="$HOME/bin:/usr/local/tranquil/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:$HOME/.gem/ruby/2.0.0/bin:$HOME/Library/Python/2.7/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/Library/Python/2.7/bin:$HOME/homebrew/bin:/usr/local/tranquil/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,6 +82,9 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias pyinit="~/.scripts/pyinit.sh"
+#alias pyinit="~/.scripts/pyinit.sh"
 # Bullet Train customizations
 BULLETTRAIN_CONTEXT_SHOW=true
+alias ruby=/Users/castelloj/homebrew/bin/ruby
+alias gem=/Users/castelloj/homebrew/bin/gem
+export GROOVY_HOME=/Users/castelloj/homebrew/opt/groovy/libexec
