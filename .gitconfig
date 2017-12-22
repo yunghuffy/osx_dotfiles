@@ -1,6 +1,6 @@
 [user]
-  name = Jacob Castello
-  email = jacobcastello@gmail.com
+	name = Jacob Castello
+	email = jacob.castello@cfpb.gov
 [core]
   editor = vim
   excludesfile = ~/.gitignore

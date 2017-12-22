@@ -88,3 +88,5 @@ BULLETTRAIN_CONTEXT_SHOW=true
 alias ruby=/Users/castelloj/homebrew/bin/ruby
 alias gem=/Users/castelloj/homebrew/bin/gem
 export GROOVY_HOME=/Users/castelloj/homebrew/opt/groovy/libexec
+randpass() { date +%s | shasum | base64 | head -c 32 ; echo }
+
