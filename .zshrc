@@ -53,7 +53,7 @@ plugins+=(git osx bundler colorize django virtualenv virtualenvwrapper docker-ma
 
 # User configuration
 
-export PATH="$HOME/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/Library/Python/2.7/bin:$HOME/homebrew/bin:/usr/local/tranquil/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/Library/Python/2.7/bin:$HOME/homebrew/bin:/usr/local/tranquil/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/jacobcastello/Library/Python/3.7/bin:/usr/local/lib/ruby/gems/2.6.0/bin:$PATH:/usr/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -85,8 +85,29 @@ export EDITOR='vim'
 #alias pyinit="~/.scripts/pyinit.sh"
 # Bullet Train customizations
 BULLETTRAIN_CONTEXT_SHOW=true
-alias ruby=/Users/castelloj/homebrew/bin/ruby
-alias gem=/Users/castelloj/homebrew/bin/gem
+BULLETTRAIN_PROMPT_ORDER=(
+  time
+  dir
+  git
+  virtualenv
+)
 export GROOVY_HOME=/Users/castelloj/homebrew/opt/groovy/libexec
 randpass() { date +%s | shasum | base64 | head -c 32 ; echo }
 
+# Source private file
+source ~/.zsh_private
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Ruby settings
+export PATH="/Users/jacobcastello/.local/opt/ruby/bin:$PATH"
+export PATH="$PATH:/Users/jacobcastello/.local/lib/ruby/gems/2.6.0/bin"
+
+# GO settings
+export PATH="$PATH:/Users/jacobcastello/go/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Vim path
+#alias vim /Users/jacobcastello/.local/bin/vim

@@ -1,6 +1,6 @@
 [user]
-	name = Jacob Castello
-	email = jacob.castello@cfpb.gov
+  name = Jacob Castello
+  email = jacob.castello@n26.com
 [core]
   editor = vim
   excludesfile = ~/.gitignore
@@ -13,6 +13,6 @@
 [credential]
   helper = osxkeychain
 [merge]
-  tool = vimdiff
+  tool = kdiff3
 [difftool]
   prompt = false
