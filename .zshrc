@@ -1,11 +1,19 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bullet-train"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,11 +57,11 @@ ZSH_THEME="bullet-train"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(git osx bundler colorize django virtualenv virtualenvwrapper docker-machine aws)
+plugins+=(git macos colorize aws)
 
 # User configuration
 
-export PATH="$HOME/.local/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/Library/Python/2.7/bin:$HOME/homebrew/bin:/usr/local/tranquil/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/jacobcastello/Library/Python/3.7/bin:/usr/local/lib/ruby/gems/2.6.0/bin:$PATH:/usr/local/bin"
+export PATH="/usr/local/bin:$HOME/.local/bin:$HOME/homebrew/bin:/usr/local/tranquil/bin:$HOME/.emacs.d/bin:$HOME/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -100,14 +108,14 @@ source ~/.zsh_private
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Ruby settings
-export PATH="/Users/jacobcastello/.local/opt/ruby/bin:$PATH"
-export PATH="$PATH:/Users/jacobcastello/.local/lib/ruby/gems/2.6.0/bin"
-
-# GO settings
-export PATH="$PATH:/Users/jacobcastello/go/bin"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Vim path
 #alias vim /Users/jacobcastello/.local/bin/vim
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
